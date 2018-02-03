@@ -14,6 +14,23 @@ export class HeroService {
   Returns an array of all Hero objects with current matchups.
    */
   getHeroes(): Hero[] {
+
+    let cheerio = require('cheerio');
+    let jsonframe = require('jsonframe-cheerio');
+
+    let $ = cheerio.load('/https://www.dotabuff.com/heroes');
+    jsonframe($);
+
+    var frame = {
+      'heroes': {
+        'selector': '.a [href=/heroes/*]',
+        'data': [{
+          'properName': '.div .name',
+          'url': ''
+        }]
+      }
+    }
+
     interface ItemsResponse {
       results: string[];
     }
