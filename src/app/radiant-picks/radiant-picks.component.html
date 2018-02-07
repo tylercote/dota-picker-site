@@ -1,7 +1,11 @@
 <div>
   <b>Radiant Picks</b>
-  <div class="pick-dropdowns">
-    <ul>
+  <div class="pick-dropdown">
+    <p-dropdown [options]="heroService.heroes" [(ngModel)]="picks[0]" [filter]="true"></p-dropdown>
+    <p-dropdown [options]="heroService.heroes" [(ngModel)]="picks[1]" [filter]="true"></p-dropdown>
+    <p-dropdown [options]="heroService.heroes" [(ngModel)]="picks[2]" [filter]="true"></p-dropdown>
+    <p-dropdown [options]="heroService.heroes" [(ngModel)]="picks[3]" [filter]="true"></p-dropdown>
+    <p-dropdown [options]="heroService.heroes" [(ngModel)]="picks[4]" [filter]="true"></p-dropdown>
   </div>
 </div>
 

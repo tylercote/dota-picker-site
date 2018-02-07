@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RadiantPicksComponent } from './radiant-picks/radiant-picks.component';
 import { DirePicksComponent } from './dire-picks/dire-picks.component';
+import { DropdownModule } from 'primeng/primeng';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { DirePicksComponent } from './dire-picks/dire-picks.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    DropdownModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,4 @@
 import { Hero } from './hero';
-import { HeroService } from '../hero.service';
 
 export class Team {
   isRadiant: boolean;
@@ -8,10 +7,10 @@ export class Team {
   bans: Hero[];
   suggestedPicks: Map<Hero, number>;
 
-  constructor(isRadiant: boolean, private heroService: HeroService) {
+  constructor(isRadiant: boolean) {
     this.isRadiant = isRadiant;
     this.suggestedPicks = new Map<Hero, number>();
-    for (let i = 0; i < heroService.heroes.length; i++) {
+    for (let i = 0; i < heroes.length; i++) {
       this.suggestedPicks.
     }
   }

@@ -1,27 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { HeroService } from '../hero.service';
-import { Hero } from '../model/hero';
+import {Component, OnChanges, OnInit} from '@angular/core';
 import { Team } from '../model/team';
+import {HeroService} from '../hero.service';
 
 @Component({
   selector: 'app-radiant-picks',
   templateUrl: './radiant-picks.component.html',
   styleUrls: ['./radiant-picks.component.css']
 })
-export class RadiantPicksComponent implements OnInit {
+export class RadiantPicksComponent implements OnInit, OnChanges {
 
-  team: Team;
+  picks;
 
-  constructor(private heroService: HeroService) {}
+  constructor(public heroService: HeroService) {}
 
   ngOnInit() {
-    this.team =  {
-      isRadiant: true,
-      // pool: this.heroService.getHeroes(),
-      picks: [],
-      bans: [],
-      suggestedPicks: new Map()
-    };
+    this.picks = [];
   }
 
 }
